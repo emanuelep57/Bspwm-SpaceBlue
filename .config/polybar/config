@@ -1,0 +1,488 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+[colors]
+;background = ${xrdb:color0:#222};
+background = #14425a
+background-alt = #2d667e
+;foreground = ${xrdb:color7:#222}
+foreground = #add8e6
+foreground-alt = #006e96
+primary = #efa95a
+secondary = #000000
+alert = #bd2c40
+
+[bar/left]
+;monitor = ${env:MONITOR:HDMI-1}
+#la linea sotto la workspace.
+line-size = 2
+
+#larghezza lunghezza e forma della barra
+override-redirect = false
+width = 190px
+height = 28
+offset-x=15px
+offset-y = 8px
+radius = 10
+fixed-center = false
+
+#colori
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+#i font necessari
+font-0 = fixed:pixelsize=12;4
+font-1 = unifont:fontformat=truetype:size=28:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free Regular:size=14;4
+font-4 = Font Awesome 5 Free Solid:size=13;4
+font-5 = Font Awesome 5 Brands Regular:size=14;4
+font-6 = forkawesome:style=Regular:size=14;4
+font-7 = forkawesome:style=Noto Sans:size=14;4
+
+#modulo da caricare nella barra
+modules-left = launcher bspwm
+
+#comportamento del cursore
+cursor-scroll = ns-resize
+
+#idk yet
+enable-ipc = true
+
+[module/bspwm]
+type = internal/bspwm
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+pin-workspaces=true
+
+ws-icon-0 =I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+
+label-focused-font = 0
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+[module/launcher]
+type = custom/text
+#aprire il terminale e : echo -ne "\uf323" | xclip -selection clipboard e dopo incollare il risultato 
+content = 
+content-foreground = #00CED1
+content-padding = 2
+click-left = ~/.config/polybar/scripts/launcher.sh &
+
+#stuff I dislike personally
+
+; "content" has the same properties as "format-NAME"
+;content-background = ${color.primary}
+;content-spacing=60
+;content-foreground = ${color.module-fg}
+; "click-(left|middle|right)" will be executed using "/usr/bin/env sh -c $COMMAND"
+;click-middle = ~/.config/polybar/scripts/launcher-full
+;click-right = ~/.config/polybar/scripts/color-switch.sh &
+; "scroll-(up|down)" will be executed using "/usr/bin/env sh -c $COMMAND"
+;scroll-up = ~/.config/polybar/scripts/launcher.sh &
+;scroll-down = ~/.config/polybar/scripts/color-switch.sh &
+
+
+[bar/center]
+#larghezza lunghezza e forma della barra
+override-redirect = false
+width = 303
+height = 28
+offset-x=42%
+offset-y = 8px
+radius = 10
+
+#colori
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+#i font necessari
+font-0 = fixed:pixelsize=15;4
+font-1 = Font Awesome 5 Free Regular:size=14;4
+font-2 = Font Awesome 5 Free Solid:size=13;4
+font-3 = Font Awesome 5 Brands Regular:size=14;4
+font-4 = forkawesome:style=Regular:size=14;4
+font-5 = forkawesome:style=Noto Sans:size=14;4
+
+#modulo da caricare nella barra
+modules-left = firefox term editor file virt date
+module-margin = 1
+;module-margin-left= 1
+
+#comportamento del cursore
+
+
+[module/date]
+type = internal/date
+interval = 1.0
+time = %H:%M
+format = <label>
+label = %date% %time%
+label-font = 0
+label-foreground = #f5f5f5
+
+[module/apps]
+type = custom/text
+content-background = ${colors.background}
+content-padding = 1
+
+[module/term]
+inherit = module/apps
+content = 
+click-left = alacritty &
+content-foreground = #00CED1
+
+[module/firefox]
+inherit = module/apps
+content = "  "
+click-left = tabbed firefox &
+content-foreground = #00CED1
+
+[module/editor]
+inherit = module/apps
+content = 
+click-left = alacritty -e nvim
+content-foreground = #00CED1
+
+[module/file]
+inherit = module/apps
+content = 
+click-left = thunar &
+content-foreground = #00CED1
+
+[module/virt]
+inherit = module/apps
+content = 
+click-left = virt-manager &
+content-foreground = #00CED1
+
+
+[bar/right]
+#larghezza lunghezza e forma della barra
+override-redirect = false
+width = 370
+height = 28
+offset-x=1536
+offset-y = 8px
+radius = 10
+
+
+font-0 = fixed:pixelsize=12;4
+font-1 = unifont:fontformat=truetype:size=28:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free Regular:size=14;4
+font-4 = Font Awesome 5 Free Solid:size=13;4
+font-5 = Font Awesome 5 Brands Regular:size=14;4
+font-6 = forkawesome:style=Regular:size=10;4
+font-7 = forkawesome:style=Noto Sans:size=10;4
+font-8 = Material Icons: style=Regular:pixelsize=10;4
+
+#colori
+background = ${colors.background}
+foreground = #ffffff
+ 
+modules-right= speedtest memory pulseaudio shutdown
+module-margin=2
+
+
+[module/speedtest]  
+type = custom/script  
+;format = <label>
+;label-foreground= #e46400
+exec-if = hash speedtest
+exec = "/home/emanuele/.config/polybar/scripts/polybar-speedtest"  
+interval = 60
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = true
+interval = 3
+
+format-volume = <ramp-volume> <label-volume> 
+format-muted = <label-muted>
+label-muted =  muted
+label-muted-foreground = #006e96
+label-volume = %percentage%%
+
+label-volume-foreground=#ffffff
+
+
+ramp-volume-0 =  
+ramp-volume-0-foreground = #ffffff
+ramp-volume-1 = 
+ramp-volume-1-foreground = #ffffff
+ramp-volume-2 = 
+ramp-volume-2-foreground = #ffffff
+click-right = pavucontrol
+
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = systemctl reboot
+menu-0-1 = power off
+menu-0-1-exec = systemctl poweroff
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 60
+
+; Available tags:
+;   <label> (default)
+;   <bar-used>
+;   <bar-free>
+;   <ramp-used>
+;   <ramp-free>
+;   <bar-swap-used>
+;   <bar-swap-free>
+;   <ramp-swap-used>
+;   <ramp-swap-free>
+format = <label>
+format-prefix =  
+
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+;   %percentage_swap_used%
+;   %percentage_swap_free%
+;   %mb_swap_total%
+;   %mb_swap_free%
+;   %mb_swap_used%
+;   %gb_swap_total%
+;   %gb_swap_free%
+;   %gb_swap_used%
+
+label = " %gb_used%"
+
+; Only applies if <ramp-used> is used
+;;ramp-used-0 = ${memory.used0}
+;;ramp-used-1 = ${memory.used1}
+;;ramp-used-2 = ${memory.used2}
+
+; Only applies if <ramp-free> is used
+;;ramp-free-0 = ${memory.free0}
+;;ramp-free-1 = ${memory.free1}
+;;ramp-free-2 = ${memory.free2}
+
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Display fixed precision values
+; Default: false
+fixed-values = true
+
+; Spacing between entries
+; Default: 2
+spacing = 2
+
+; Available tags:
+;   <label-mounted> (default)
+;   <bar-free>
+;   <bar-used>
+;   <ramp-capacity>
+format-mounted = <label-mounted>
+
+; Available tokens:
+;   %mountpoint%
+;   %type%
+;   %fsname%
+;   %percentage_free%
+;   %percentage_used%
+;   %total%
+;   %free%
+;   %used%
+; Default: %mountpoint% %percentage_free%%
+label-mounted = %free%
+label-mounted-foreground=#ffffff
+
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+format = <label>
+format-prefix = "" 
+format-prefix-foreground = #ffffff
+format-underline = #f90000
+label = " %percentage%%"
+
+
+
+[module/shutdown]
+type = custom/text
+content = "    "
+click-left = ~/.config/polybar/scripts/powermenu.sh &
+
+
+[module/title]
+type = internal/xwindow
+
+
+; Available tags:
+;   <label> (default)
+format = <label>
+format-background = #f00
+format-foreground = #000
+format-padding = 4
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Empty
+label-empty-foreground = #707880
+
+
+
+[module/updates]
+type = custom/script
+
+; Available tokens:
+;   %counter%
+; Command to be executed (using "/usr/bin/env sh -c [command]")
+exec = ~/.config/polybar/scripts/updates.sh
+
+; Conditional command that, if defined, needs to exit successfully
+; before the main exec command is invoked.
+; Default: ""
+;;exec-if = ""
+
+; Will the script output continous content?
+; Default: false
+tail = true
+
+; Seconds to sleep between updates
+; Default: 2 (0 if `tail = true`)
+interval = 5
+
+; Available tags:
+;   <output> - deprecated
+;   <label> (default)
+format = <label>
+format-prefix = "   "
+
+; Available tokens:
+;   %output%
+; Default: %output%
+label = %output%
+
+; Available tokens:
+;   %counter%
+;   %pid%
+;
+; "click-(left|middle|right)" will be executed using "/usr/bin/env sh -c [command]"
+click-left = exo-open --launch konsole &
+click-right = exo-open --launch konsole &
+;;double-click-left = echo double left %counter%
+;;double-click-middle = echo double middle %counter%
+;;double-click-right = echo double right %counter%
+
+; Available tokens:
+;   %counter%
+;   %pid%
+;
+; "scroll-(up|down)" will be executed using "/usr/bin/env sh -c [command]"
+;;scroll-up = echo scroll up %counter%
+;;scroll-down = echo scroll down %counter%
+
+[module/system-usb-udev]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-usb-udev.sh
+tail = true
+click-left = ~/.config/polybar/scripts/system-usb-udev.sh --mount &
+click-right = ~/.config/polybar/scripts/system-usb-udev.sh --unmount &
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+
+screenchange-reload = false
+;compositing-background = xor
+compositing-background = screen
+compositing-foreground = source
+compositing-border = over
+pseudo-transparency = true
