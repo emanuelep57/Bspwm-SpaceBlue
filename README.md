@@ -26,15 +26,15 @@ This is my first configuration and it has been made on Archlinux, hence, due to 
 - xidlehook (tool for locking screen and suspend computer) https://github.com/jD91mZM2/xidlehook
 - redshiftgui-bin (tool for setting monitor light)
 - otf-material-icons (I advice to install this to make polybar work finest)
-- papirus-icon-theme
+- papirus-icon-theme https://archlinux.org/packages/community/any/papirus-icon-theme/
 - betterlockscreen (wrapper of i3lock) https://github.com/pavanjadhaw/betterlockscreen
 - xorg-xrandr and libxrandr are needed if using xidlehook
 - Alacritty
 - Tdrop https://github.com/noctuid/tdrop
 - ttf-roboto
 - ttf-nerd-fonts-symbols
-- Orchis-dark gtk theme
-- Qogir cursors
+- Orchis-dark gtk theme https://www.gnome-look.org/p/1357889/
+- Qogir cursors https://www.gnome-look.org/p/1366182/
 
 
 **PROGRAMS I USE**
