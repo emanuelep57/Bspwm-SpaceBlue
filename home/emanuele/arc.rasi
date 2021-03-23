@@ -1,0 +1,145 @@
+* {
+    /* Custom colours */
+    tempus-bg-alt:         #404040BF;
+    tempus-bg-main:        #323944;
+    tempus-fg-alt:         #5294e2;
+    tempus-fg-main:        #ffffffFF;
+    tempus-red:            #E76720BF;
+    tempus-green:          #A3BE6CBF;
+    tempus-yellow:         #EBCB8BBF;
+    tempus-blue:           #81A1C1BF;
+    tempus-magenta:        #B48EADBF;
+    tempus-cyan:           #88C0D0BF;
+    tempus-red-bright:     #FCA159BF;
+    tempus-green-bright:   #96a42dBF;
+    tempus-yellow-bright:  #a8a030BF;
+    tempus-blue-bright:    #8e9cc0BF;
+    tempus-magenta-bright: #d58888BF;
+    tempus-cyan-bright:    #7aa880BF;
+
+    /* Global properties */
+    background-color: rgba      (0,0,0, 0%);
+}
+#window {
+    background-color: @tempus-bg-main;
+    border:           0px 0 0;
+    border-color:     @tempus-bg-alt;
+    border-radius:    12px;
+    padding:          0px;
+}
+#mainbox {
+    border:  2;
+    padding: 15;
+    background-color: @tempus-bg-main;
+    border-color: @tempus-fg-alt;
+    border-radius:    12px;
+}
+#message {
+    border:       2px solid 0px 0px;
+    border-color: @tempus-fg-alt;
+    border-radius:    12px;
+    padding:      1px ;
+}
+#textbox {
+    text-color:   @tempus-fg-main;
+}
+#listview {
+    fixed-height: 0;
+    border:       0px solid 0px 0px;
+    border-color: @tempus-fg-alt;
+    spacing:      10px;
+    scrollbar:    false;
+    padding:      2px 0px 0px;
+}
+#element {
+    border: 0;
+    padding: 4px;
+
+}
+#element.normal.normal {
+    text-color:       @tempus-fg-main;
+    border-radius:    12px;
+}
+#element.normal.urgent {
+    background-color: @tempus-red;
+    text-color:       @tempus-bg-alt;
+    border-radius:    12px;
+}
+#element.normal.active {
+    background-color: @tempus-blue;
+    text-color:       @tempus-fg-main;
+    border-radius:    12px;
+}
+#element.selected.normal {
+    background-color: @tempus-fg-alt;
+    text-color:       @tempus-fg-main;
+    border-radius:    12px;
+}
+#element.selected.urgent {
+    background-color: @tempus-red-bright;
+    text-color:       @tempus-bg-main;
+    border-radius:    12px;
+}
+#element.selected.active {
+    background-color: @tempus-blue-bright;
+    text-color:       @tempus-fg-main;
+    border-radius:    12px;
+}
+#element.alternate.normal {
+    text-color:       @tempus-fg-main;
+    border-radius:    12px;
+}
+#element.alternate.urgent {
+    background-color: @tempus-red-bright;
+    text-color:       @tempus-bg-alt;
+    border-radius:    12px;
+}
+#element alternate.active {
+    background-color: @tempus-blue-bright;
+    text-color:       @tempus-bg-alt;
+    border-radius:    12px;
+}
+#sidebar {
+    border:       0px solid 0px 0px;
+    border-color: @tempus-bg-main;
+    spacing:    10;
+}
+#button {
+    spacing: 0;
+    background-color: @tempus-bg-main;
+    text-color:       @tempus-fg-main;
+    border-radius:    12px;
+}
+#button.selected {
+    background-color: @tempus-cyan;
+    text-color:       @tempus-bg-alt;
+    border-radius:    12px;
+}
+#inputbar {
+    spacing:    10;
+    padding:    9px;
+    text-color: @tempus-fg-main;
+    background-color: @tempus-bg-main;
+}
+#button.selected {
+    background-color: @tempus-fg-main;
+    text-color:       @tempus-bg-alt;
+    border-radius:    12px;
+}
+#inputbar {
+    spacing:    10;
+    padding:    5px;
+    text-color: @tempus-fg-main;
+    children:   [ prompt,entry ];
+    border-radius:    12px;
+}
+#prompt {
+    spacing:    0;
+    text-color: @tempus-fg-main;
+}
+#entry {
+    spacing:    0;
+    text-color: @tempus-fg-main;
+}
+
+
