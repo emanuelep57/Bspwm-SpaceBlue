@@ -9,6 +9,7 @@ This is my first configuration and it has been made on Archlinux, hence, due to 
 **NECESSARY DEPENDENCIES:**
 - bspwm
 - sxhkd
+- ttf-material-icons-git
 - otf-font-awesome
 - ttf-font-awesome (need this font for polybar but you might as well change it or remove inside the polybar config file)
 - ttf-fork-awesome (need this font for polybar but you might as well change it or remove inside the polybar config file)
@@ -18,7 +19,7 @@ This is my first configuration and it has been made on Archlinux, hence, due to 
 - rofi-power-menu (check out https://github.com/jluttine/rofi-power-menu)
 - speedtest-cli (check out https://github.com/ShiroUsagi-san/speedtest-polybar-module)
 - pavucontrol
-- pulseaudio (without pulseuadio the module for the volume in polybar can't work)
+- pulseaudio-control (without pulseuadio the module for the volume in polybar can't work)
 - picom-ibhagwan-git (you might choose to not use a compositor but you wouldn't have the same results)
 
 
