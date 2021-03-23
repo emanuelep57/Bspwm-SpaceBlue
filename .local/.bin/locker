@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+xidlehook \
+  --not-when-fullscreen \
+  --not-when-audio \
+  --timer 120 \
+    'xrandr --output DVI-D-0 --brightness .5' \
+    'xrandr --output DVI-D-0 --brightness 1' \
+  --timer 30 \
+    'xrandr --output DVI-D-0 --brightness 1; .local/bin/lock' \
+    ''\
+  --timer 300 \
+    'systemctl suspend' -
