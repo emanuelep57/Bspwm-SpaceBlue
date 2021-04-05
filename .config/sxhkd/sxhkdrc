@@ -15,41 +15,33 @@ super + button9
     bspc config bottom_padding 0
 
 
-
-#KILL ALL THE TRAY
+#KILL ALL THE TRAY BAR AND MAKE bottom_padding = 0
 F4
 	bash -ic ktray
-
 
 #terminal emulator
 super + Return
 	alacritty	
 
-
 # program launcher
 Menu
 	rofi -show combi
-
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-
 #dropdown terminal
 F12
     	tdrop -a -h 50% -w 90% -x 5% -y 0% xterm
-
 
 #lockscreen
 alt + l	
 	betterlockscreen -l
 
-
 #print screen
 Print
 	scrot -p -d 5 -e 'mv $f ~/Pictures'
-
 
 #adjust volume
 XF86AudioLowerVolume
@@ -58,21 +50,17 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
     pactl -- set-sink-volume 0 +3%
 
-
 #close microsoft teams the tumor
 super + F4
 	killall teams
-
 
 #Shutdown menu
 alt + F4
 	~/.config/polybar/scripts/powermenu.sh
 
-
 #browser
 super + q
 	qutebrowser
-
 
 #file manager
 super + e
@@ -82,10 +70,8 @@ super + e
 super + shift + Return 
 	alacritty --working-directory ~/PSD
 
-
 super + space
   bsp-layout cycle
-
 
 #
 # bspwm hotkeys
@@ -99,12 +85,11 @@ super + alt + {q,r}
 super + {_,shift + }w
 	bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
+# alternate between the tiled and monocle layout, when in monocle layout kills traybar
 super + m
 	bspc desktop -l next && bash -ic ktray
 
-# send the newest mar
-send node to the newest preselected node
+# send node to the newest preselected node
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
@@ -158,8 +143,7 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-
-#boh
+#move window without swapping
 ctrl + space
 	bspc node -n 'last.!automatic.local'
 
