@@ -1,3 +1,9 @@
+/*
+Author : emanuelep57
+my github : https://github.com/emanuelep57
+my e-mail : emanuelep57@protonmail.com
+*/
+
 configuration {
 	modi: "run,drun,window";
 	width: 33;
