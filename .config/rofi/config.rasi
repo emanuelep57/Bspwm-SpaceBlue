@@ -26,7 +26,7 @@ configuration {
 	window-format: "{w:0}	{n:0}	{t:0}";
 	click-to-exit: true;
 	show-match: true;
-    	theme: "~/NTAC.rasi";
+    	theme: "~/ntac.rasi";
 	max-history-size: 25;
 	combi-hide-mode-prefix: true;
 	display-window: "";
