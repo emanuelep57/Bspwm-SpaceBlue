@@ -1,7 +1,7 @@
 * {
     /* Custom colours */
     tempus-bg-alt:         #404040BF;
-    tempus-bg-main:        #323944;
+    tempus-bg-main:        #0f3042;
     tempus-fg-alt:         #5294e2;
     tempus-fg-main:        #ffffffFF;
     tempus-red:            #E76720BF;
@@ -18,7 +18,7 @@
     tempus-cyan-bright:    #7aa880BF;
 
     /* Global properties */
-    background-color: rgba      (0,0,0, 0%);
+    background-color: #0f3042;
 }
 #window {
     background-color: @tempus-bg-main;
