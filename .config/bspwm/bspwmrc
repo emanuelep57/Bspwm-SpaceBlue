@@ -1,30 +1,41 @@
 #! /bin/sh
 
+#start sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+
+#aesthetical configuration
 bspc monitor -d I II III IV V
-bspc config normal_border_color '#2c5161'
-bspc config focused_border_color '#2e86ab'
-bspc config window_gap           12
-bspc config top_padding          38
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-bspc config border_width         3
+bspc config normal_border_color     '#2c5161'
+bspc config focused_border_color    '#2e86ab'
+bspc config window_gap              12
+bspc config top_padding             38
+bspc config split_ratio             0.52
+bspc config borderless_monocle      true
+bspc config gapless_monocle         true
+bspc config border_width            3
+bspc config border_radius 	        10
+bspc config bottom_padding	        0
+bspc config top_monocle_padding     10
+bspc config left_monocle_padding    0
+bspc config bottom_monocle_padding  0
+bspc config right_monocle_padding  	0
+
+#ofc if you want to removethe tray bar you can set this to 0
+bspc config bottom_padding 			25
 
 
-#bspc rule -a firefox state=xfloating 
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-bspc rule -a nvim border_width=0
+#AUTOSTART APPLICATIONS
+
+#start telegram
+bspc rule -a KotatogramDesktop desktop=II
+kotatogram-desktop &
 
 #launch polybar
 $HOME/.config/polybar/launch.sh
 
 #set keyboard layout
-#setxkbmap -layout it
+setxkbmap -layout it
 
 #keyboard light
 xset led on
@@ -38,8 +49,6 @@ $HOME/.config/picom/start_picom.sh
 #start locker
 $HOME/.local/bin/locker &
 
-#start dunst (notification service)
-#/usr/bin/dunst
-
 #start redshift
-#redshiftgui --min &
+$HOME/.local/bin/redshift.sh
+
