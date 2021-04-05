@@ -5,37 +5,51 @@
 #LED ON/off
 Scroll_Lock
 	/home/emanuele/.local/bin/led_on_off.sh
- 
-#make padding higher or lower when maximize screen
+
+
+#MAKE PADDING ON BOTTOM HIGHER OR LOWER DEPENDING ON TRAY
 super + button8
-    bspc config top_padding 50
+    bspc config bottom_padding 23
 
 super + button9
-    bspc config top_padding 38
+    bspc config bottom_padding 0
+
+
+
+#KILL ALL THE TRAY
+F4
+	bash -ic ktray
+
 
 #terminal emulator
 super + Return
 	alacritty	
 
+
 # program launcher
 Menu
 	rofi -show combi
+
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
+
 #dropdown terminal
 F12
-    	tdrop -a -h 50% -w 90% -x 5% -y 0% alacritty
+    	tdrop -a -h 50% -w 90% -x 5% -y 0% xterm
+
 
 #lockscreen
-super + shift + l	
+alt + l	
 	betterlockscreen -l
+
 
 #print screen
 Print
-	scrot -p -e 'mv $f ~/Pictures'
+	scrot -p -d 5 -e 'mv $f ~/Pictures'
+
 
 #adjust volume
 XF86AudioLowerVolume
@@ -45,12 +59,32 @@ XF86AudioRaiseVolume
     pactl -- set-sink-volume 0 +3%
 
 
-
 #close microsoft teams the tumor
-F4
+super + F4
 	killall teams
 
 
+#Shutdown menu
+alt + F4
+	~/.config/polybar/scripts/powermenu.sh
+
+
+#browser
+super + q
+	qutebrowser
+
+
+#file manager
+super + e
+	alacritty -e joshuto
+
+#PSD
+super + shift + Return 
+	alacritty --working-directory ~/PSD
+
+
+super + space
+  bsp-layout cycle
 
 
 #
@@ -67,7 +101,7 @@ super + {_,shift + }w
 
 # alternate between the tiled and monocle layout
 super + m
-	bspc desktop -l next
+	bspc desktop -l next && bash -ic ktray
 
 # send the newest mar
 send node to the newest preselected node
@@ -83,11 +117,8 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+super + {t,a,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-super + a
-	bspc node -t pseudo_tiled
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -129,10 +160,8 @@ super + {_,shift + }{1-9,0}
 
 
 #boh
-super + space
+ctrl + space
 	bspc node -n 'last.!automatic.local'
-
-
 
 #
 # preselect
