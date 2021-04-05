@@ -1,0 +1,234 @@
+[keymaps]
+# backspace = 263
+
+#apri nuove finestre
+[[mapcommand]]
+command = "new_tab"
+keys = [ "T" ]
+[[mapcommand]]
+command = "new_tab"
+keys = [ "ctrl+t" ]
+
+#chiudi finestre
+[[mapcommand]]
+command = "close_tab"
+keys = [ "W" ]
+[[mapcommand]]
+command = "close_tab"
+keys = [ "ctrl+w" ]
+[[mapcommand]]
+command = "close_tab"
+keys = [ "q" ]
+[[mapcommand]]
+command = "force_quit"
+keys = [ "Q" ]
+[[mapcommand]]
+command = "reload_dir_list"
+keys = [ "R" ]
+
+
+#hidden files
+[[mapcommand]]
+command = "toggle_hidden"
+keys = [ "z", "h" ]
+[[mapcommand]]
+command = "toggle_hidden"
+keys = [ "ctrl+z"]
+
+
+#muoversi fra più istanze
+[[mapcommand]]
+command = "tab_switch 1"
+keys = [ "\t" ]
+[[mapcommand]]
+command = "tab_switch -1"
+keys = [ "backtab" ]
+
+#muoversi nel file manager
+[[mapcommand]]
+command = "cursor_move_up"
+keys = [ "up" ]
+[[mapcommand]]
+command = "cursor_move_up"
+keys = [ "k" ]
+[[mapcommand]]
+command = "cursor_move_down"
+keys = [ "down" ]
+[[mapcommand]]
+command = "cursor_move_down"
+keys = [ "j" ]
+[[mapcommand]]
+command = "cursor_move_end"
+keys = [ "end" ]
+[[mapcommand]]
+command = "cursor_move_end"
+keys = [ "G" ]
+[[mapcommand]]
+command = "cursor_move_home"
+keys = [ "home" ]
+[[mapcommand]]
+command = "cursor_move_home"
+keys = [ "g", "g" ]
+[[mapcommand]]
+command = "cursor_move_page_up"
+keys = [ "page_up" ]
+[[mapcommand]]
+command = "cursor_move_page_down"
+keys = [ "page_down" ]
+
+[[mapcommand]]
+command = "parent_cursor_move_up"
+keys = [ "[" ]
+[[mapcommand]]
+command = "parent_cursor_move_down"
+keys = [ "]" ]
+
+
+#apri file
+[[mapcommand]]
+command = "open_file"
+keys = [ "right" ]
+[[mapcommand]]
+command = "open_file"
+keys = [ "l" ]
+[[mapcommand]]
+command = "open_file"
+keys = [ "\n" ]
+[[mapcommand]]
+command = "open_file_with"
+keys = [ "r" ]
+
+#naviga indietro
+[[mapcommand]]
+command = "console cd"
+keys = [ "c", "d" ]
+[[mapcommand]]
+command = "cd .."
+keys = [ "left" ]
+[[mapcommand]]
+command = "cd .."
+keys = [ "h" ]
+
+
+#TAGLIA FILE
+[[mapcommand]]
+command = "cut_files"
+keys = [ "d", "d" ]
+[[mapcommand]]
+command = "cut_files"
+keys = [ "ctrl+x" ]
+
+#COPIA FILE
+[[mapcommand]]
+command = "copy_files"
+keys = [ "y", "y" ]
+[[mapcommand]]
+command = "copy_files"
+keys = [ "ctrl+c" ]
+
+
+#INCOLLA FILE
+[[mapcommand]]
+command = "paste_files"
+keys = [ "p", "p" ]
+[[mapcommand]]
+command = "paste_files"
+keys = [ "ctrl+v" ]
+
+#INCOLLA E SOVRASCRIVI
+[[mapcommand]]
+command = "paste_files --overwrite"
+keys = [ "p", "o" ]
+[[mapcommand]]
+command = "paste_files --overwrite"
+keys = [ "ctrl+p", "o" ]
+
+#ELIMINA FILE
+[[mapcommand]]
+command = "delete_files"
+keys = [ "d", "D" ]
+[[mapcommand]]
+command = "delete_files"
+keys = [ "delete" ]
+[[mapcommand]]
+command = "delete_files"
+keys = [ "backspace" ]
+
+#RINOMINA
+[[mapcommand]]
+command = "rename_append"
+keys = [ "a" ]
+[[mapcommand]]
+command = "rename_append"
+keys = [ "ctrl+r" ]
+[[mapcommand]]
+command = "rename_prepend"
+keys = [ "A" ]
+
+#SELEZIONA FILE
+[[mapcommand]]
+command = "select_files --toggle"
+keys = [ " " ]
+
+#SELEZIONA TUTTI
+[[mapcommand]]
+command = "select_files --toggle --all"
+keys = [ "t" ]
+[[mapcommand]]
+command = "select_files --toggle --all"
+keys = [ "ctrl+a" ]
+
+#RICERCA FILE
+[[mapcommand]]
+command = "console search "
+keys = [ "/" ]
+[[mapcommand]]
+command = "console search "
+keys = [ "ctrl+f" ]
+[[mapcommand]]
+command = "search_next"
+keys = [ "n" ]
+[[mapcommand]]
+command = "search_prev"
+keys = [ "N" ]
+
+
+
+
+
+[[mapcommand]]
+command = "bulk_rename"
+keys = [ "b", "b" ]
+[[mapcommand]]
+command = "set_mode"
+keys = [ "=" ]
+
+[[mapcommand]]
+command = "console"
+keys = [ ";" ]
+[[mapcommand]]
+command = "console mkdir "
+keys = [ "m", "k" ]
+[[mapcommand]]
+command = "console rename "
+keys = [ "c", "w" ]
+
+[[mapcommand]]
+command = "sort lexical"
+keys = [ "s", "l" ]
+[[mapcommand]]
+command = "sort mtime"
+keys = [ "s", "m" ]
+[[mapcommand]]
+command = "sort natural"
+keys = [ "s", "n" ]
+[[mapcommand]]
+command = "sort reverse"
+keys = [ "s", "r" ]
+
+[[mapcommand]]
+command = "cd /"
+keys = [ "g", "/" ]
+[[mapcommand]]
+command = "cd /etc"
+keys = [ "g", "e" ]
