@@ -1,0 +1,168 @@
+!-------- Xterm Terminal Settings {{{
+!------------------------------------------------------
+
+! I took most of the info for configuration from: https://wiki.archlinux.org/index.php/Xterm
+
+!TERM ENVIRONMENTAL VARIABLE
+XTerm.termName: xterm-256color
+
+!SET LOCALE UTF-8
+XTerm.vt100.locale: true
+
+!FONTS=========================================
+
+XTerm*faceName: Monospace
+XTerm*faceSize: 11
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 6
+! VT font menu: Tiny
+xterm*faceSize2: 8
+! VT font menu: Medium
+xterm*faceSize3: 10
+! VT font menu: Large
+xterm*faceSize4: 14
+! VT font menu: Huge
+xterm*faceSize5: 20
+
+
+! Cursor ====================================================
+! pointer and cursor (blinking and color)
+XTerm*pointerColor: white
+XTerm*pointerColorBackground: black
+XTerm*cursorColor: white
+XTerm*cursorBlink: false
+
+
+!! Selecting Text ========================================================
+! Only select text
+XTerm*highlightSelection: true
+! Remove trailing spaces
+XTerm*trimSelection: true
+
+!! Scrolling ========================================================
+! Use: Shift-Pageup / Shift-Pagedown to scroll or mousewheel
+! Lines of output that you can scroll back over
+XTerm*saveLines: 16384
+
+! Turn the scrollbar on, and put it on the right
+! XTerm.vt100.scrollBar: true
+! XTerm.vt100.scrollbar.width: 8
+! xterm*scrollBar: true
+! xterm*rightScrollBar: true
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+XTerm*scrollTtyOutput: false
+
+
+!! Keybinding ========================================================
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font() \n\
+  Ctrl <Key> 0: set-vt-font(d) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) \n\
+  <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+  <Btn2Up>: insert-selection(PRIMARY)
+
+! enable copy/paste hotkey to work (shift+insert = paste ; mouse highlight = copy)
+XTerm*selectToClipboard: true
+! disable fullscreen hotkey alt+enter (hotkey conflicts with weechat, midnight commander ...etc)
+XTerm*fullscreen: never
+! enable alt key to work
+XTerm*metaSendsEscape: true
+! Fix the backspace key (for Emacs)
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! Tips: Left and right selection (text selection using left button for beginning and right button for end)
+! Tips: Triple Click ( 1 click = nothing, 2 click = select word, 3 click = select line )
+!
+! XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
+! <BtnUp>:select-end(SELECT, CUT_BUFFER0) \n\
+! Ctrl <Btn4Down>:scroll-back(1,halfpage,m) \n\
+! <Btn4Down>:scroll-back(5,line,m) \n\
+! Ctrl <Btn5Down>:scroll-forw(1,halfpage,m) \n\
+! <Btn5Down>:scroll-forw(5,line,m) \n\
+
+!    Ctrl <Key>M: maximize() \n\
+!    Ctrl <Key>R: restore() \n\
+!                 Shift <KeyPress> Prior:scroll-back(1,halfpage) \n\
+!                  Shift <KeyPress> Next:scroll-forw(1,halfpage) \n\
+!                Shift <KeyPress> Select:select-cursor-start() \
+!                                        select-cursor-end(SELECT, CUT_BUFFER0) \n\
+!                Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
+!                        Alt <Key>Return:fullscreen() \n\
+!               <KeyRelease> Scroll_Lock:scroll-lock() \n\
+!           Shift~Ctrl <KeyPress> KP_Add:larger-vt-font() \n\
+!           Shift Ctrl <KeyPress> KP_Add:smaller-vt-font() \n\
+!           Shift <KeyPress> KP_Subtract:smaller-vt-font() \n\
+!                       ~Meta <KeyPress>:insert-seven-bit() \n\
+!                        Meta <KeyPress>:insert-eight-bit() \n\
+!                       !Ctrl <Btn1Down>:popup-menu(mainMenu) \n\
+!                       ~Meta <Btn1Down>:select-start() \n\
+!                     ~Meta <Btn1Motion>:select-extend() \n\
+!                       !Ctrl <Btn2Down>:popup-menu(vtMenu) \n\
+!                 ~Ctrl ~Meta <Btn2Down>:ignore() \n\
+!                        Meta <Btn2Down>:clear-saved-lines() \n\
+!                   ~Ctrl ~Meta <Btn2Up>:insert-selection(SELECT, CUT_BUFFER0) \n\
+!                       !Ctrl <Btn3Down>:popup-menu(fontMenu) \n\
+!                 ~Ctrl ~Meta <Btn3Down>:start-extend() \n\
+!                     ~Meta <Btn3Motion>:select-extend() \n\
+!                        Ctrl <Btn4Down>:scroll-back(1,halfpage,m) \n\
+!                             <Btn4Down>:scroll-back(5,line,m)     \n\
+!                        Ctrl <Btn5Down>:scroll-forw(1,halfpage,m) \n\
+!                                <BtnUp>:select-end(SELECT, CUT_BUFFER0) \n\
+!                              <BtnDown>:ignore()
+
+
+!-------- Theme: ntac 
+!         author: emanuelep57	
+!------------------------------------------------------
+
+XTerm.vt100.foreground: white
+XTerm.vt100.background: #0f3042
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0:  #191E2A
+*color8:  #686868
+
+!! red dark/light
+*color1:  #FF2A1B
+*color9:  #F97976
+
+!! green dark/light
+*color2:  #32612D
+*color10: #03C04A
+
+!! yellow dark/light
+*color3:  #FF9729
+*color11: #FFCC66
+
+!! blue dark/light
+*color4:  #2D667E
+*color12: #4094AD
+
+!! magenta dark/light
+*color5: #7549C9
+*color13: #FF00FF
+
+!! cyan dark/light
+*color6: #4DAABE
+*color14: #00FFFF
+
+!! white dark/light
+*color7: #C7C7C7
+*color15: #FFFFFF
+! }}}
