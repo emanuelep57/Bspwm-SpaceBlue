@@ -6,8 +6,9 @@ xidlehook \
   --timer 120 \
     'xrandr --output DVI-D-0 --brightness .5' \
     'xrandr --output DVI-D-0 --brightness 1' \
-  --timer 30 \
-    'xrandr --output DVI-D-0 --brightness 1; .local/bin/lock' \
+  --timer 15 \
+    'xrandr --output DVI-D-0 --brightness 1; betterlockscreen -l' \
     ''\
   --timer 300 \
-    'systemctl suspend' -
+    'systemctl suspend' \
+    ''
