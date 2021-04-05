@@ -85,42 +85,6 @@ XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 ! XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 
-! <BtnUp>:select-end(SELECT, CUT_BUFFER0) \n\
-! Ctrl <Btn4Down>:scroll-back(1,halfpage,m) \n\
-! <Btn4Down>:scroll-back(5,line,m) \n\
-! Ctrl <Btn5Down>:scroll-forw(1,halfpage,m) \n\
-! <Btn5Down>:scroll-forw(5,line,m) \n\
-
-!    Ctrl <Key>M: maximize() \n\
-!    Ctrl <Key>R: restore() \n\
-!                 Shift <KeyPress> Prior:scroll-back(1,halfpage) \n\
-!                  Shift <KeyPress> Next:scroll-forw(1,halfpage) \n\
-!                Shift <KeyPress> Select:select-cursor-start() \
-!                                        select-cursor-end(SELECT, CUT_BUFFER0) \n\
-!                Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
-!                        Alt <Key>Return:fullscreen() \n\
-!               <KeyRelease> Scroll_Lock:scroll-lock() \n\
-!           Shift~Ctrl <KeyPress> KP_Add:larger-vt-font() \n\
-!           Shift Ctrl <KeyPress> KP_Add:smaller-vt-font() \n\
-!           Shift <KeyPress> KP_Subtract:smaller-vt-font() \n\
-!                       ~Meta <KeyPress>:insert-seven-bit() \n\
-!                        Meta <KeyPress>:insert-eight-bit() \n\
-!                       !Ctrl <Btn1Down>:popup-menu(mainMenu) \n\
-!                       ~Meta <Btn1Down>:select-start() \n\
-!                     ~Meta <Btn1Motion>:select-extend() \n\
-!                       !Ctrl <Btn2Down>:popup-menu(vtMenu) \n\
-!                 ~Ctrl ~Meta <Btn2Down>:ignore() \n\
-!                        Meta <Btn2Down>:clear-saved-lines() \n\
-!                   ~Ctrl ~Meta <Btn2Up>:insert-selection(SELECT, CUT_BUFFER0) \n\
-!                       !Ctrl <Btn3Down>:popup-menu(fontMenu) \n\
-!                 ~Ctrl ~Meta <Btn3Down>:start-extend() \n\
-!                     ~Meta <Btn3Motion>:select-extend() \n\
-!                        Ctrl <Btn4Down>:scroll-back(1,halfpage,m) \n\
-!                             <Btn4Down>:scroll-back(5,line,m)     \n\
-!                        Ctrl <Btn5Down>:scroll-forw(1,halfpage,m) \n\
-!                                <BtnUp>:select-end(SELECT, CUT_BUFFER0) \n\
-!                              <BtnDown>:ignore()
-
 
 !-------- Theme: ntac 
 !         author: emanuelep57	
