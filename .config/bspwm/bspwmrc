@@ -1,5 +1,9 @@
 #! /bin/sh
 
+#Author : emanuelep57
+#my github : https://github.com/emanuelep57
+#my e-mail : emanuelep57@protonmail.com
+
 #start sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
 
