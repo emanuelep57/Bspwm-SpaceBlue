@@ -1,1 +1,99 @@
-    
+[selection]
+fg = "light_yellow"
+bold = true
+[selection.prefix]
+prefix = "  "
+size = 2
+
+[executable]
+fg = "light_green"
+bold = true
+
+[regular]
+fg = "white"
+
+[directory]
+fg = "light_blue"
+bold = true
+
+[link]
+fg = "light_cyan"
+bold = true
+
+[socket]
+fg = "light_magenta"
+bold = true
+
+[ext]
+
+[ext.bmp]
+fg = "yellow"
+[ext.jpg]
+fg = "yellow"
+[ext.jpeg]
+fg = "yellow"
+[ext.png]
+fg = "yellow"
+[ext.ppm]
+fg = "yellow"
+[ext.svg]
+fg = "yellow"
+[ext.gif]
+fg = "yellow"
+
+[ext.wav]
+fg = "magenta"
+[ext.flac]
+fg = "magenta"
+[ext.mp3]
+fg = "magenta"
+[ext.avi]
+fg = "magenta"
+[ext.m3u]
+fg = "magenta"
+[ext.mov]
+fg = "magenta"
+[ext.mp4]
+fg = "magenta"
+[ext.mkv]
+fg = "magenta"
+[ext.m4a]
+fg = "magenta"
+[ext.ts]
+fg = "magenta"
+[ext.webm]
+fg = "magenta"
+[ext.wmv]
+fg = "magenta"
+
+[ext.7z]
+fg = "red"
+[ext.zip]
+fg = "red"
+bold = true
+[ext.bz2]
+fg = "red"
+[ext.gz]
+fg = "red"
+bold = true
+[ext.tar]
+fg = "red"
+bold = true
+[ext.tgz]
+fg = "red"
+bold = true
+[ext.xz]
+fg = "dark_red"
+bold = true
+[ext.rar]
+fg = "red"
+bold = true
+
+[ext.pdf]
+fg = "light_red"
+
+[ext.c]
+fg = "green"
+
+[ext.txt]
+fg = "white"
