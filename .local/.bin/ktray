@@ -1,0 +1,33 @@
+#!/bin/bash
+bspc config bottom_padding 0
+if pgrep -f "kotatogram-desktop" 
+then
+	killall kotatogram-desktop
+	if pgrep -x "redshiftgui.elf" 
+	then
+		killall redshiftgui.elf
+		if pgrep -x "teams" 
+		 then
+			killall teams
+		fi
+	else
+		if pgrep -x "teams"
+		 then
+			killall teams
+		fi
+	fi
+else
+	if pgrep -x "redshiftgui.elf" 
+	then
+		killall redshiftgui.elf
+		if pgrep -x "teams" 
+		then
+			killall teams
+		fi
+	else
+		if pgrep -x "teams" 
+		then
+			killall teams
+		fi
+	fi		
+fi
