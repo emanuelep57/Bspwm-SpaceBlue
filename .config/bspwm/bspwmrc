@@ -38,11 +38,8 @@ kotatogram-desktop &
 #launch polybar
 $HOME/.config/polybar/launch.sh
 
-#set keyboard layout
-setxkbmap -layout it
-
-#keyboard light
-xset led on
+#keyboard light and numpad working
+xset led on && xset -led named 'Mouse Keys'
 
 #set bg
 /home/emanuele/.fehbg
