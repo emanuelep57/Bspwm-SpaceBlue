@@ -6,15 +6,6 @@
 Scroll_Lock
 	/home/emanuele/.local/bin/led_on_off.sh
 
-
-#MAKE PADDING ON BOTTOM HIGHER OR LOWER DEPENDING ON TRAY
-super + button8
-    bspc config bottom_padding 23
-
-super + button9
-    bspc config bottom_padding 0
-
-
 #KILL ALL THE TRAY
 F4
 	bash -ic ktray
@@ -109,38 +100,38 @@ super + g
 
 #swap layout
 super + space
-	bsp-layout cycle --layouts tall,rtall,wide,rwide,grid,rgrid,even,tiled,monocle
+	bsp-layout cycle --layouts tall,rtall,wide,rwide,grid,rgrid,even,tiled
 
 #layout tall
-alt + t
+super + KP_End
 	bsp-layout set tall
 
 #layout reverse-tall
-ctrl + shift + t
+super + shift + KP_End
 	bsp-layout set rtall
 
 #layout wide
-ctrl + l
+super + KP_Down
 	bsp-layout set wide
 
 #layout reverse-wide
-ctrl + shift + l
+super + shift + Kp_Down
 	bsp-layout set rwide
 
 #layout grid
-ctrl + g
+super + KP_Next
 	bsp-layout set grid
 
 #layout reverse-grid
-ctrl + shift + g
+super + shift + KP_Next
 	bsp-layout set rgrid
 
 #layout even
-ctrl + e
+super + KP_Enter
 	bsp-layout set even
 
 #default layout
-ctrl + BackSpace
+super + BackSpace
 	bsp-layout set tiled
 
 #hide or close node
@@ -150,6 +141,7 @@ super + h
 #undo close node
 super + u
 	ubspc undo close
+
 
 #
 # state/flags
@@ -162,6 +154,7 @@ super + {t,a,s,f}
 # set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
+
 
 #
 # focus/swap
@@ -198,9 +191,10 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 
-#boh
+#move the node without swapping
 ctrl + space
 	bspc node -n 'last.!automatic.local'
+
 
 #
 # preselect
