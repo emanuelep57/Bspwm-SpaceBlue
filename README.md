@@ -7,56 +7,68 @@ This is my first configuration and it has been made on Archlinux, hence, due to 
 ![](Screenshots/2021-03-20-234946_1920x1080_scrot.png)
 
 **NECESSARY DEPENDENCIES:**
-- bspwm
-- sxhkd
+- bspwm-rounded-corners-git
+- bspwm-undo-git
+- bsp-layout-git
+- sxhkd-git
 - ttf-material-icons-git
-- otf-font-awesome
-- ttf-font-awesome (need this font for polybar but you might as well change it or remove inside the polybar config file)
-- ttf-fork-awesome (need this font for polybar but you might as well change it or remove inside the polybar config file)
-- feh (you might as well use another program to set your background)
-- polybar
-- rofi (without rofi the power menu in polybar can't work)
-- rofi-power-menu (check out https://github.com/jluttine/rofi-power-menu)
-- speedtest-cli (check out https://github.com/ShiroUsagi-san/speedtest-polybar-module)
-- pavucontrol
-- pulseaudio-control (without pulseuadio the module for the volume in polybar can't work)
-- picom-ibhagwan-git (you might choose to not use a compositor but you wouldn't have the same results)
-
-
-**OPTIONAL DEPENDENCIES**
-- xidlehook (tool for locking screen and suspend computer) https://github.com/jD91mZM2/xidlehook
-- redshiftgui-bin (tool for setting monitor light)
-- otf-material-icons (I advice to install this to make polybar work finest)
-- papirus-icon-theme https://archlinux.org/packages/community/any/papirus-icon-theme/
-- betterlockscreen (wrapper of i3lock) https://github.com/pavanjadhaw/betterlockscreen
-- xorg-xrandr and libxrandr are needed if using xidlehook
-- Alacritty
-- Tdrop https://github.com/noctuid/tdrop
+- ttf-font-awesome 
+- ttf-fork-awesome 
 - ttf-roboto
 - ttf-nerd-fonts-symbols
-- Orchis-dark gtk theme https://www.gnome-look.org/p/1357889/
-- Qogir cursors https://www.gnome-look.org/p/1366182/
+- ttf-material-icons-git
+- otf-font-awesome
+- otf-material-icons-git
+- feh
+- polybar-git
+- rofi
+- rofi-power-menu (check out https://github.com/jluttine/rofi-power-menu)
+- pavucontrol
+- pulseaudio-control 
+- picom-ibhagwan-git 
+- tdrop-git
+- xterm
+- papirus-icon-theme-git
+- transset-df
+- alacritty
+- xorg
+
+**OPTIONAL DEPENDENCIES**
+- xidlehook
+- redshiftgui-bin 
+- numlockx
+- betterlockscreen (wrapper of i3lock) 
+- xorg-xrandr 
+- ibxrandr 
+- Lxappearance
+- Teja_Darkest gtk theme
+- Qogir cursors 
+- ePapirus icon theme
 
 
 **PROGRAMS I USE**
+- c https://github.com/ryanmjacobs/c
 - xpdf (pdf reader)
-- xorg-xinit (I use xinit to start bspwm session)
-- scrot (take screen)
-- sublime-text3 and neovim (editors)
-- spacevim to customize neovim  https://spacevim.org/quick-start-guide/
-- telegram-desktop-bin 
-- qutebrowser and firefox (browsers)
-- nnn-nerd and thunar (file managers)
-- qemu, virt-manager and virt-viewer (handle virtual machines)
-- tar and unzip (handle archives)
-- paru (aur helper)
-- lxappearance (change themes)
-- nvidia (video drivers)
-- bitwarden-bin (password manager)
-- bpytop (htop like)
+- xorg-xinit
+- oh-my-bash
+- scrot 
+- sublime-text3 (Package control, ayu, C11, Clang Format, ClangAutoComplete,SublimeAStyleFormatter)
+- kotatogram-desktop
+- qutebrowser and firefox 
+- my startpage https://github.com/emanuelep57/Blue-tea
+- joshuto and thunar (file managers)
+- qemu, virt-manager and virt-viewer
+- tar ,unzip, unrar
+- mpv-git and celluloid-git
+- paru 
+- nvidia 
+- nvidia-settings
+- bitwarden-bin 
+- bpytop 
 - discord
-- Alacritty-themes
+- alacritty-themes
 - qbittorrent
+- bash-pipes
 - teams
 
 
