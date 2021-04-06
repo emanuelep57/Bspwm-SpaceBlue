@@ -121,18 +121,7 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
 #enable darkmode
-#c.colors.webpage.darkmode.enabled= True
+c.colors.webpage.darkmode.enabled= True
 
-
-import dracula.draw
-
-# Load existing settings made via :set
-config.load_autoconfig()
-
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    }
-})
+c.url.start_pages = ["file:///home/emanuele/.startpages/blue-tea/index.html"]
 
