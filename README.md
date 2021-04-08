@@ -2,7 +2,7 @@
 
 **Note:**
 
-This is my first configuration and it has been made on Archlinux. Please look at screenshot section to see how it looks.
+This is my first configuration of bspwm made on Archlinux. Please look at screenshot section to see how it looks.
 
 ![PREVIEW](Screenshots/1.png)
 
