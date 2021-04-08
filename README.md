@@ -2,15 +2,23 @@
 
 **Note:**
 
-This is my first configuration and it has been made on Archlinux, hence, due to my lack of experience, I will only cover how to make possible to have this configuration on Archlinux.
+This is my first configuration and it has been made on Archlinux. Please look at screenshot section to see how it looks.
 
 ![](Screenshots/2021-03-20-234946_1920x1080_scrot.png)
 
-**NECESSARY DEPENDENCIES:**
+### NECESSARY DEPENDENCIES:
+**wm:**
 - bspwm-rounded-corners-git
 - bspwm-undo-git
 - bsp-layout-git
 - sxhkd-git
+
+**appearance:**
+- Teja_Darkest gtk theme
+- Qogir cursors 
+- ePapirus icon theme
+
+**fonts:**
 - ttf-material-icons-git
 - ttf-font-awesome 
 - ttf-fork-awesome 
@@ -19,44 +27,47 @@ This is my first configuration and it has been made on Archlinux, hence, due to 
 - ttf-material-icons-git
 - otf-font-awesome
 - otf-material-icons-git
+
+**necessary utilities:**
 - feh
 - polybar-git
+- my startpage for browser good looking https://github.com/emanuelep57/Blue-tea (star it :D)
 - rofi
 - rofi-power-menu (check out https://github.com/jluttine/rofi-power-menu)
 - pavucontrol
 - pulseaudio-control 
 - picom-ibhagwan-git 
-- tdrop-git
-- xterm
+- Tdrop-git (for dropdown terminal)
+- Xterm ( if you want dropdown terminal alacritty doesn't work fine with tdrop)
 - papirus-icon-theme-git
 - transset-df
-- alacritty
-- xorg
+- Alacritty
+- Xorg (you may use wayland but if you're going to install also xidlehook you may need Xorg)
 
-**OPTIONAL DEPENDENCIES**
+
+### OPTIONAL DEPENDENCIES THAT MIGHT HELP
 - xidlehook
 - redshiftgui-bin 
 - numlockx
-- betterlockscreen (wrapper of i3lock) 
+- betterlockscreen
 - xorg-xrandr 
-- ibxrandr 
-- Lxappearance
-- Teja_Darkest gtk theme
-- Qogir cursors 
-- ePapirus icon theme
+- libxrandr 
+- Lxappearance (helps to set gtk themes)
+- oh-my-bash
+- Alacritty-themes (if you wanna change my alacritty theme)
 
 
-**PROGRAMS I USE**
+
+### PROGRAMS I USE
 - c https://github.com/ryanmjacobs/c
 - xpdf (pdf reader)
 - xorg-xinit
-- oh-my-bash
 - scrot 
-- sublime-text3 (Package control, ayu, C11, Clang Format, ClangAutoComplete,SublimeAStyleFormatter)
+- l3afpad (fork of leafpad)
+- VsCodium
 - kotatogram-desktop
 - qutebrowser and firefox 
-- my startpage https://github.com/emanuelep57/Blue-tea
-- joshuto and thunar (file managers)
+- joshuto-git and thunar (file managers)
 - qemu, virt-manager and virt-viewer
 - tar ,unzip, unrar
 - mpv-git and celluloid-git
@@ -66,7 +77,6 @@ This is my first configuration and it has been made on Archlinux, hence, due to 
 - bitwarden-bin 
 - bpytop 
 - discord
-- alacritty-themes
 - qbittorrent
 - bash-pipes
 - teams
