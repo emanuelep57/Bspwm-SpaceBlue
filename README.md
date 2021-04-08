@@ -1,4 +1,4 @@
-**Welcome to personal configuration of bspwm! (deepblue)**
+### BSPWM DEEPBLUE
 
 **Note:**
 
