@@ -4,7 +4,7 @@
 
 This is my first configuration and it has been made on Archlinux. Please look at screenshot section to see how it looks.
 
-![](Screenshots/2021-03-20-234946_1920x1080_scrot.png)
+![PREVIEW](Screenshots/1.png)
 
 ### NECESSARY DEPENDENCIES:
 **wm:**
