@@ -30,6 +30,7 @@ This is my first configuration of bspwm made on Archlinux. Please look at screen
 
 **necessary utilities:**
 - feh
+- texted (the amazing editor you see in the picture, install and rate it from https://github.com/Leonia-Tech/texted)
 - polybar-git
 - my startpage for browser good looking https://github.com/emanuelep57/Blue-tea (star it :D)
 - rofi
