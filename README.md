@@ -1,4 +1,4 @@
-### BSPWM DEEPBLUE
+### BSPWM SpaceBlue
 
 **Note:**
 
