@@ -42,7 +42,7 @@ $HOME/.config/polybar/launch.sh
 xset led on && xset -led named 'Mouse Keys'
 
 #set bg
-/home/emanuele/.fehbg
+~/.fehbg
 
 #compositor picom
 $HOME/.config/picom/start_picom.sh 
